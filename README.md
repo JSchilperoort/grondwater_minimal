@@ -1,6 +1,8 @@
 # Grondwater minimal example
 
 Instructions:
+
+**First Insert the SAS token in grondwater_minimal.py**
 ```
 pip install virtualenv
 virtualenv venv
