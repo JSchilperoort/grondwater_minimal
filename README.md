@@ -6,7 +6,16 @@ Instructions:
 ```
 pip install virtualenv
 virtualenv venv
+```
+Windows:
+```
+.\venv\Scripts\activate
+```
+Unix:
+```
 source venv/bin/activate
+```
+```
 pip install -r requirements.txt
 python grondwater_minimal.py  
 ```
