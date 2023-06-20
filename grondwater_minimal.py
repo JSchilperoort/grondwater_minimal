@@ -6,10 +6,7 @@ import configparser
 
 def read_isohypsen(container_client, blob_names, level, date):
     # find all blobs that start with date and end with '{}cm.cpg'.format(level) or '{}cm.dbf'.format(level) or '{}cm.shp'.format(level) or '{}cm.shx'.format(level)
-    relevant_blob_names = [blob_name for blob_name in blob_names if blob_name.endswith('{}cm.cpg'.format(level)) or
-                           blob_name.endswith('{}cm.dbf'.format(level)) or
-                           blob_name.endswith('{}cm.shp'.format(level)) or
-                           blob_name.endswith('{}cm.shx'.format(level))]
+    relevant_blob_names = [blob_name for blob_name in blob_names if blob_name.endswith('{}cm.zip'.format(level))]
 
     # check if the date exists
     blob_names_to_read = [
@@ -67,7 +64,6 @@ def main(sas_url):
 
 if __name__ == '__main__':
     SAS_token = ''  # TODO: fill in sas token here
-
     sas_url = r'https://stdeepgrondwaterdev001.blob.core.windows.net/external/?{}'.format(
         SAS_token)
     main(sas_url)
